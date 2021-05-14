@@ -1,0 +1,51 @@
+.inputAmountOfMoney {
+    display: block;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    line-height: 2.3;
+    padding-left: 5px;
+    width: 70%;
+    padding-left: 5px;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .5em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    background-image: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: 100%;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.inputAmountOfMoney::placeholder {
+    color: rgba(68, 68, 68, 0.521);
+    padding-left: 5px;
+}
+
+.inputAmountOfMoney:hover {
+    border-color: #888;
+  }
+
+.inputAmountOfMoney:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    color: #222; 
+    outline: none;
+  }
+
+
+  input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+
+  background-color: blue;
+  // -webkit-appearance: none; 
+  // margin: 0; 
+}
+
