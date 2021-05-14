@@ -60,7 +60,7 @@ class Cantor extends React.Component {
     });
 
     if (e.target.value !== "") {
-      fetch(`http://api.nbp.pl/api/exchangerates/rates/A/${e.target.value}/`, {
+      fetch(`https://api.nbp.pl/api/exchangerates/rates/A/${e.target.value}/`, {
         method: "GET",
       })
         .then((response) => response.json())
