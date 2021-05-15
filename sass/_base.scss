@@ -2,6 +2,12 @@
 
 body {
     background-color: white;
+    @include small {
+        background-color: red;
+        width: 100vw;
+        height: 80vw;
+        margin: 0 auto;
+    }
 }
 .wrapper {
     position: relative;
@@ -9,26 +15,23 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 40vw;
-    height: 30vw;
-    margin: 10vh auto;
+    width: 100vw;
+    height: 100vh;
     background-image: url('../dollar-2825136_1280.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border-radius: 10px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
     z-index: 1;
 }
 
 
-.result {
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    color: black;
-}
+// .result {
+//     width: 40px;
+//     height: 40px;
+//     background-color: white;
+//     color: black;
+// }
 
 
 .wrapper::before {

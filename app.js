@@ -2,15 +2,20 @@ const Result = ({ currency, amount, ratio }) => {
   if (amount <= 0) {
     return (
       <div className="result">
-        <span className="result__element">Result: </span>
+        <span className="result__element">Todays best offer </span>
       </div>
     );
   }
   const result = (amount / ratio).toFixed(2);
   return (
     <div className="result">
-      <span className="result__element">Result: </span>
-      <span className="result__element">{result}</span>
+      <span className="result__element">Todays ratio: {ratio} </span>
+      <span className="result__element">
+        {" "}
+        <i className="fas fa-long-arrow-alt-right"></i>
+        {"  "}
+        {result}
+      </span>
       <span className="result__element">{currency}</span>
     </div>
   );
@@ -73,6 +78,9 @@ class Cantor extends React.Component {
   };
 
   handleAmount = (e) => {
+    if (isNaN(e.target.value)) {
+      console.log("nan");
+    }
     if (!this.state.currencyName) {
       alert("Please select currency");
     } else if (e.target.value < 0) {
