@@ -1,5 +1,49 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+$base-font: 'Roboto', sans-serif;
+
+
 @mixin small {
     @media (max-width: 599px) {
         @content;
     }
+}
+
+@mixin medium {
+    @media (min-width: 600px) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (min-width: 1025px) {
+        @content;
+    }
+}
+
+
+@mixin allImputs {
+    display: block;
+    font-size: 16px;
+    font-family: $base-font;
+    font-weight: 700;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .5em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    cursor: pointer;
+
+    width: 80%;
+    
+    @include medium {
+        width: 60%;
+    }
+    @include large {
+        width: 40%;
+    }
+
 }
